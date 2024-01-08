@@ -482,8 +482,8 @@
                     <div class="row g-0 h-100 align-content-center">
                       <div class="col-11 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div class="text-muted text-small d-lg-none">Nama</div>
-                        <a href="#" class="text-truncate h-100 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#discountDetailModal">
-                          Wirayasa
+                        <a href="#" class="text-truncate h-100 d-flex align-items-center " data-bs-toggle="modal" data-bs-target="#discountDetailModal">
+                          Brambang Goreng
                         </a>
                       </div>
                       <div class="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
@@ -507,12 +507,12 @@
                       <div class="col-1 col-lg-1 d-flex flex-column justify-content-center align-items-lg-end mb-2 mb-lg-0 order-2 text-end order-lg-last">
                         <div class="container-fluid d-lg-flex flex-lg-row gap-1 gap-lg-2 justify-content-lg-end">
                             <div class="col">
-                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow p-3 fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#editModal">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow p-3 fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
@@ -527,67 +527,43 @@
           <!-- Discount List End -->
 
           <!-- Discount Detail Modal Start -->
-          <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Discount Detail</h5>
+                  <h5 class="modal-title">Edit Produk</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
-                      <label class="form-label">Code</label>
-                      <input type="text" class="form-control" value="SUMMERSALE" />
+                      <label class="form-label">Nama</label>
+                      <input type="text" class="form-control" value="Brambang Goreng" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Harga Beli</label>
+                      <input type="text" class="form-control" value="Rp. 20.000.00" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Harga Jual</label>
+                      <input type="text" class="form-control" value="Rp. 30.000.00" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Stok</label>
+                      <input type="text" class="form-control" value="210" />
                     </div>
                     <div class="mb-3 w-100">
-                      <label class="form-label">Type</label>
-                      <select class="select-single-no-search">
-                        <option label="&nbsp;"></option>
-                        <option value="Fixed Amount">Fixed Amount</option>
-                        <option value="Free Shipping">Free Shipping</option>
-                        <option value="Percentage" selected>Percentage</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Start</label>
-                      <input type="text" class="form-control date-picker-close" value="06/01/2020" />
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">End</label>
-                      <input type="text" class="form-control date-picker-close" value="07/01/2020" />
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Limit</label>
-                      <input type="text" class="form-control" value="5000" />
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Usage</label>
-                      <input type="text" class="form-control" value="2723" readonly />
-                    </div>
-                    <div class="mb-3 w-100">
-                      <label class="form-label">Status</label>
-                      <select class="select-single-no-search">
-                        <option label="&nbsp;"></option>
-                        <option value="Active" selected>Active</option>
-                        <option value="Inactive">Inactive</option>
-                        <option value="Expired">Expired</option>
-                      </select>
+                      <label class="form-label">Satuan</label>
+                        <select class="form-select" aria-placeholder="Pilih jabatan">
+                          <option value="Inactive">PCS</option>
+                          <option value="Active">KG</option>
+                          <option value="Expired">Liter</option>
+                        </select>
                     </div>
                   </form>
                 </div>
-                <div class="modal-footer border-0">
-                  <a
-                    href="#"
-                    class="btn btn-icon btn-icon-only btn-outline-primary"
-                    data-delay='{"show":"500", "hide":"0"}'
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Delete"
-                    data-bs-dismiss="modal"
-                  >
-                    <i data-acorn-icon="bin"></i>
-                  </a>
+                <div class="modal-footer border-1">
+                  
                   <a href="#" class="btn btn-icon btn-icon-end btn-primary" data-bs-dismiss="modal">
                     <span>Save</span>
                     <i data-acorn-icon="save"></i>
@@ -623,7 +599,7 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title fw-bold">Tambahkan Karyawan</h5>
+                  <h5 class="modal-title fw-bold">Tambahkan Produk</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -646,11 +622,11 @@
                     </div>
                     <div class="mb-3 w-100">
                       <label class="form-label">Satuan</label>
-                      <select class="form-select" aria-placeholder="Pilih jabatan">
-                        <option value="Inactive">Karyawan</option>
-                        <option value="Active">Manager</option>
-                        <option value="Expired">Supervisor</option>
-                      </select>
+                        <select class="form-select" aria-placeholder="Pilih jabatan">
+                          <option value="Inactive">PCS</option>
+                          <option value="Active">KG</option>
+                          <option value="Expired">Liter</option>
+                        </select>
                     </div>
                   </form>
                 </div>
