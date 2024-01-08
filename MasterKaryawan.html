@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Acorn Admin Template | Discount</title>
+    <title>Karyawan</title>
     <meta name="description" content="Ecommerce Discount" />
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
@@ -59,12 +59,14 @@
         <div class="nav-content d-flex">
           <!-- Logo Start -->
           <div class="logo position-relative">
-            <a href="Dashboard.html">
+            <a href="Dashboards.html">
               <!-- Logo can be added directly -->
               <!-- <img src="img/logo/logo-white.svg" alt="logo" /> -->
 
               <!-- Or added via css to provide different ones for different color themes -->
-              <div class="img"></div>
+              <div class="text-light">
+                <span class="text-secondary text-medium">Nustra</span> Studio
+               </div>
             </a>
           </div>
           <!-- Logo End -->
@@ -72,8 +74,8 @@
           <!-- User Menu Start -->
           <div class="user-container d-flex">
             <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="profile" alt="profile" src="img/profile/profile-1.webp" />
-              <div class="name">Zayn Hartley</div>
+              <img src="icon/circle-user-solid.svg" class="profile" alt="profile">
+              <div class="name">Galang Wira</div>
             </a>
             <div class="dropdown-menu dropdown-menu-end user-menu wide">
               <div class="row mb-3 ms-0 me-0">
@@ -234,65 +236,72 @@
           <div class="menu-container flex-grow-1">
             <ul id="menu" class="menu">
               <li>
-                <a href="Dashboard.html">
+                <a href="Dashboards.html">
                   <i data-acorn-icon="shop" class="icon" data-acorn-size="18"></i>
                   <span class="label">Dashboard</span>
                 </a>
               </li>
               <li>
+                <a href="inputProduk.html" data-href="Products.html">
+                  <i data-acorn-icon="duplicate" class="icon" data-acorn-size="18"></i>
+                  <span class="label">Input Produk</span>
+                </a>
+              </li>
+              <li>
                 <a href="#products" data-href="Products.html">
-                  <i data-acorn-icon="cupcake" class="icon" data-acorn-size="18"></i>
-                  <span class="label">Products</span>
+                  <i data-acorn-icon="folders" class="icon" data-acorn-size="18"></i>
+                  <span class="label">Master Data</span>
                 </a>
                 <ul id="products">
                   <li>
-                    <a href="Products.List.html">
-                      <span class="label">List</span>
+                    <a href="MasterKaryawan.html">
+                      <span class="label">Karyawan</span>
                     </a>
                   </li>
                   <li>
                     <a href="Products.Detail.html">
-                      <span class="label">Detail</span>
+                      <span class="label">Produk</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Products.Detail.html">
+                      <span class="label">Customer</span>
                     </a>
                   </li>
                 </ul>
               </li>
+              
               <li>
-                <a href="#orders" data-href="Orders.html">
-                  <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
-                  <span class="label">Orders</span>
+                <a href="#histori" data-href="Products.html">
+                  <i data-acorn-icon="file-text" class="icon" data-acorn-size="18"></i>
+                  <span class="label">Histori</span>
                 </a>
-                <ul id="orders">
+                <ul id="histori">
                   <li>
-                    <a href="Orders.List.html">
-                      <span class="label">List</span>
+                    <a href="#">
+                      <span class="label">Barang Masuk</span>
                     </a>
                   </li>
                   <li>
-                    <a href="Orders.Detail.html">
-                      <span class="label">Detail</span>
+                    <a href="Products.Detail.html">
+                      <span class="label">Barang Keluar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Products.Detail.html">
+                      <span class="label">Transaksi</span>
                     </a>
                   </li>
                 </ul>
               </li>
+             
               <li>
-                <a href="#customers" data-href="Customers.html">
-                  <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
-                  <span class="label">Customers</span>
+                <a href="#produksi" data-href="Products.html">
+                  <i data-acorn-icon="factory" class="icon" data-acorn-size="18"></i>
+                  <span class="label">Produksi</span>
                 </a>
-                <ul id="customers">
-                  <li>
-                    <a href="Customers.List.html">
-                      <span class="label">List</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="Customers.Detail.html">
-                      <span class="label">Detail</span>
-                    </a>
-                  </li>
-                </ul>
               </li>
+
               <li>
                 <a href="#storefront" data-href="Storefront.html">
                   <i data-acorn-icon="screen" class="icon" data-acorn-size="18"></i>
@@ -400,43 +409,7 @@
                   <i data-acorn-icon="plus"></i>
                   <span>Tambah Karyawan</span>
                 </button>
-                <div class="dropdown d-inline-block d-xl-none">
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary btn-icon btn-icon-only ms-1"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i data-acorn-icon="sort"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end custom-sort">
-                    <a class="dropdown-item sort" data-sort="code" href="#">Nama</a>
-                    <a class="dropdown-item sort" data-sort="type" href="#">No Hp</a>
-                    <a class="dropdown-item sort" data-sort="date" href="#">Alamat</a>
-                    <a class="dropdown-item sort" data-sort="usage" href="#">Jabatan</a>
-                    <a class="dropdown-item sort" data-sort="status" href="#">Status</a>
-                  </div>
-                </div>
-                <div class="btn-group ms-1 check-all-container">
-                  <div class="btn btn-outline-primary btn-custom-control p-0 ps-3 pe-2" data-target="#checkboxTable">
-                    <span class="form-check float-end">
-                      <input type="checkbox" class="form-check-input" id="checkAll" />
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
-                    data-bs-offset="0,3"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  ></button>
-                  <div class="dropdown-menu dropdown-menu-end">
-                    <button class="dropdown-item" id="deleteChecked" type="button">Delete</button>
-                  </div>
-                </div>
+                
               </div>
               <!-- Top Buttons End -->
             </div>
@@ -462,37 +435,11 @@
             <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
               <div class="d-inline-block">
                 <!-- Print Button Start -->
-                <button
-                  class="btn btn-icon btn-icon-only btn-foreground-alternate shadow"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-delay="0"
-                  title="Print"
-                  type="button"
-                >
-                  <i data-acorn-icon="print"></i>
-                </button>
+                
                 <!-- Print Button End -->
 
                 <!-- Export Dropdown Start -->
-                <div class="d-inline-block">
-                  <button class="btn p-0" data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                    <span
-                      class="btn btn-icon btn-icon-only btn-foreground-alternate shadow dropdown"
-                      data-bs-delay="0"
-                      data-bs-placement="top"
-                      data-bs-toggle="tooltip"
-                      title="Export"
-                    >
-                      <i data-acorn-icon="download"></i>
-                    </span>
-                  </button>
-                  <div class="dropdown-menu shadow dropdown-menu-end">
-                    <button class="dropdown-item export-copy" type="button">Copy</button>
-                    <button class="dropdown-item export-excel" type="button">Excel</button>
-                    <button class="dropdown-item export-cvs" type="button">Cvs</button>
-                  </div>
-                </div>
+                
                 <!-- Export Dropdown End -->
 
                 <!-- Length Start -->
@@ -535,6 +482,7 @@
                 </div>
               </div>
               <div id="checkboxTable">
+                <!-- start LOOP -->
                 <div class="card mb-2">
                   <div class="card-body py-4 py-lg-0 sh-lg-8">
                     <div class="row g-0 h-100 align-content-center">
@@ -565,12 +513,12 @@
                       <div class="col-1 col-lg-1 d-flex flex-column justify-content-center align-items-lg-end mb-2 mb-lg-0 order-2 text-end order-lg-last">
                         <div class="container-fluid d-lg-flex flex-lg-row gap-1 gap-lg-2 justify-content-lg-end">
                             <div class="col">
-                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow fw-bold p-lg-3" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#editUserModal">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow fw-bold p-lg-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
@@ -681,51 +629,41 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Tambahkan Karyawan</h5>
+                  <h5 class="modal-title fw-bold">Tambahkan Karyawan</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
-                      <label class="form-label">Code</label>
+                      <label class="form-label">Nama</label>
                       <input type="text" class="form-control" />
                     </div>
                     <div class="mb-3 w-100">
-                      <label class="form-label">Type</label>
-                      <select class="select-single-no-search">
-                        <option label="&nbsp;"></option>
-                        <option value="Fixed Amount">Fixed Amount</option>
-                        <option value="Free Shipping">Free Shipping</option>
-                        <option value="Percentage">Percentage</option>
-                      </select>
+                      <label class="form-label">No Hp.</label>
+                      <input type="text" class="form-control">
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Start</label>
-                      <input type="text" class="form-control date-picker-close" />
+                      <label class="form-label">Alamat</label>
+                      <input type="text" class="form-control" />
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">End</label>
-                      <input type="text" class="form-control date-picker-close" />
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Limit</label>
-                      <input type="text" class="form-control mask-number" />
+                      <label class="form-label">Gaji Harian</label>
+                      <input type="text" class="form-control" />
                     </div>
                     <div class="mb-3 w-100">
-                      <label class="form-label">Status</label>
-                      <select class="select-single-no-search">
-                        <option label="&nbsp;"></option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                        <option value="Expired">Expired</option>
+                      <label class="form-label">Jabatan</label>
+                      <select class="form-select" aria-placeholder="Pilih jabatan">
+                        <option value="Inactive">Karyawan</option>
+                        <option value="Active">Manager</option>
+                        <option value="Expired">Supervisor</option>
                       </select>
                     </div>
                   </form>
                 </div>
-                <div class="modal-footer border-0">
+                <div class="modal-footer">
                   <a href="#" class="btn btn-icon btn-icon-end btn-primary" data-bs-dismiss="modal">
-                    <span>Add</span>
-                    <i data-acorn-icon="send"></i>
+                    <span>Tambah</span>
+                    <i data-acorn-icon="plus"></i>
                   </a>
                 </div>
               </div>
