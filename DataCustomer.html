@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Input Produk</title>
-    <meta name="description" content="Ecommerce Dashboard" />
+    <title>Karyawan</title>
+    <meta name="description" content="Ecommerce Discount" />
     <!-- Favicon Tags Start -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
@@ -31,12 +31,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="font/CS-Interface/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Font Tags End -->
     <!-- Vendor Styles Start -->
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendor/OverlayScrollbars.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/select2-bootstrap4.min.css" />
+
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.standalone.min.css" />
 
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
@@ -258,7 +264,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="Products.Detail.html">
+                    <a href="DataCustomer.html">
                       <span class="label">Customer</span>
                     </a>
                   </li>
@@ -272,7 +278,7 @@
                 </a>
                 <ul id="histori">
                   <li>
-                    <a href="MasterKaryawan.html">
+                    <a href="#">
                       <span class="label">Barang Masuk</span>
                     </a>
                   </li>
@@ -386,22 +392,22 @@
                     <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                     <span class="text-small align-middle">Home</span>
                   </a>
-                  <h1 class="mb-0 pb-0 display-4" id="title">Input Produk</h1>
+                  <h1 class="mb-0 pb-0 display-4" id="title">Data Customer</h1>
                 </div>
               </div>
               <!-- Title End -->
 
               <!-- Top Buttons Start -->
               <div class="w-100 d-md-none"></div>
-              <div class="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
+              <div class="col-12 col-sm-12 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto"
                   data-bs-toggle="modal"
-                  data-bs-target="#addProdukModal"
+                  data-bs-target="#addKaryawanModal"
                 >
                   <i data-acorn-icon="plus"></i>
-                  <span>Tambah Produk</span>
+                  <span>Tambah Customer</span>
                 </button>
                 
               </div>
@@ -467,11 +473,10 @@
               <div class="card mb-2 bg-transparent no-shadow d-none d-lg-block">
                 <div class="card-body pt-0 pb-0 sh-3">
                   <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-lg-4 d-flex align-items-center mb-2 mb-lg-0 text-muted text-small">Nama</div>
-                    <div class="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">Harga Beli</div>
-                    <div class="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">Harga Jual</div>
-                    <div class="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">Stok</div>
-                    <div class="col-6 col-lg-1 d-flex align-items-center text-alternate text-medium text-muted text-small">Satuan</div>
+                    <div class="col-12 col-lg-2 d-flex align-items-center mb-2 mb-lg-0 text-muted text-small">Nama</div>
+                    <div class="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">No. HP</div>
+                    <div class="col-6 col-lg-4 d-flex align-items-center text-alternate text-medium text-muted text-small">Alamat</div>
+                    <div class="col-6 col-lg-2 d-flex align-items-center text-alternate text-medium text-muted text-small">Jumlah Transaksi</div>
                   </div>
                 </div>
               </div>
@@ -480,39 +485,36 @@
                 <div class="card mb-2">
                   <div class="card-body py-4 py-lg-0 sh-lg-8">
                     <div class="row g-0 h-100 align-content-center">
-                      <div class="col-11 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
+                      <div class="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative">
                         <div class="text-muted text-small d-lg-none">Nama</div>
-                        <a href="#" class="text-truncate h-100 d-flex align-items-center " data-bs-toggle="modal" data-bs-target="#discountDetailModal">
-                          Brambang Goreng
+                        <a href="#" class="text-truncate h-100 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#discountDetailModal">
+                          Galang
                         </a>
                       </div>
                       <div class="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-3 order-lg-2">
-                        <div class="text-muted text-small d-lg-none">Harga Beli</div>
-                        <div class="text-alternate">Rp. 20.000.00</div>
+                        <div class="text-muted text-small d-lg-none">No. HP</div>
+                        <div class="text-alternate">08421539428</div>
                       </div>
-                      <div class="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
-                        <div class="text-muted text-small d-lg-none">Harga Jual</div>
-                        <div class="text-alternate">Rp. 50.000.00</div>
+                      <div class="col-6 col-lg-4 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-4 order-lg-3">
+                        <div class="text-muted text-small d-lg-none">Alamat</div>
+                        <div class="text-alternate">Jln. Nganjuk No.13</div>
                       </div>
                       <div class="col-6 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-5 order-lg-4">
-                        <div class="text-muted text-small d-lg-none">Stok</div>
-                        <div class="text-alternate">230</div>
+                        <div class="text-muted text-small d-lg-none">Jumlah Transaksi</div>
+                        <div class="text-alternate">12</div>
                       </div>
                       <div class="col-6 col-lg-1 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
-                        <div class="text-muted text-small d-lg-none">Satuan</div>
-                        <div>
-                          <span class="badge rounded-pill bg-outline-primary">PCS</span>
-                        </div>
+                        
                       </div>
                       <div class="col-1 col-lg-1 d-flex flex-column justify-content-center align-items-lg-end mb-2 mb-lg-0 order-2 text-end order-lg-last">
                         <div class="container-fluid d-lg-flex flex-lg-row gap-1 gap-lg-2 justify-content-lg-end">
                             <div class="col">
-                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow p-3 fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#editModal">
+                                <button class="btn btn-primary d-flex justi fy-content-center align-items-center border shadow fw-bold p-3 p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#editUserModal">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow p-3 fw-bold p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                <button class="btn btn-danger d-flex justify-content-center align-items-center border shadow fw-bold p-3 p-lg-2 p-xl-3" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
@@ -527,43 +529,31 @@
           <!-- Discount List End -->
 
           <!-- Discount Detail Modal Start -->
-          <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
+          <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Edit Produk</h5>
+                  <h5 class="modal-title">Edit Data Customer</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
                       <label class="form-label">Nama</label>
-                      <input type="text" class="form-control" value="Brambang Goreng" />
+                      <input type="text" class="form-control" value="Galang" />
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Harga Beli</label>
-                      <input type="text" class="form-control" value="Rp. 20.000.00" />
+                      <label class="form-label">No hp</label>
+                      <input type="text" class="form-control" value="08421539428" />
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Harga Jual</label>
-                      <input type="text" class="form-control" value="Rp. 30.000.00" />
+                      <label class="form-label">Alamat</label>
+                      <input type="text" class="form-control" value="Jln. Warujayeng" />
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">Stok</label>
-                      <input type="text" class="form-control" value="210" />
-                    </div>
-                    <div class="mb-3 w-100">
-                      <label class="form-label">Satuan</label>
-                        <select class="form-select" aria-placeholder="Pilih jabatan">
-                          <option value="Inactive">PCS</option>
-                          <option value="Active">KG</option>
-                          <option value="Expired">Liter</option>
-                        </select>
-                    </div>
+                    
                   </form>
                 </div>
                 <div class="modal-footer border-1">
-                  
                   <a href="#" class="btn btn-icon btn-icon-end btn-primary" data-bs-dismiss="modal">
                     <span>Save</span>
                     <i data-acorn-icon="save"></i>
@@ -595,11 +585,11 @@
           <!-- Delete Modal End -->
 
           <!-- Discount Add Modal Start -->
-          <div class="modal fade" id="addProdukModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal fade" id="addKaryawanModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title fw-bold">Tambahkan Produk</h5>
+                  <h5 class="modal-title fw-bold">Tambahkan Customer</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -609,24 +599,12 @@
                       <input type="text" class="form-control" />
                     </div>
                     <div class="mb-3 w-100">
-                      <label class="form-label">Harga Beli</label>
+                      <label class="form-label">No Hp.</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Harga Jual</label>
+                      <label class="form-label">Alamat</label>
                       <input type="text" class="form-control" />
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Stok</label>
-                      <input type="text" class="form-control" />
-                    </div>
-                    <div class="mb-3 w-100">
-                      <label class="form-label">Satuan</label>
-                        <select class="form-select" aria-placeholder="Pilih jabatan">
-                          <option value="Inactive">PCS</option>
-                          <option value="Active">KG</option>
-                          <option value="Expired">Liter</option>
-                        </select>
                     </div>
                   </form>
                 </div>
@@ -642,13 +620,14 @@
           <!-- Discount Add Modal End -->
         </div>
       </main>
+
       <!-- Layout Footer Start -->
       <footer>
         <div class="footer-content">
           <div class="container">
             <div class="row">
               <div class="col-12 col-sm-6">
-                <p class="mb-0 text-muted text-medium">Nustra Studio 2024</p>
+                <p class="mb-0 text-muted text-medium">Colored Strategies 2021</p>
               </div>
               <div class="col-sm-6 d-none d-sm-block">
                 <ul class="breadcrumb pt-0 pe-0 mb-0 float-end">
@@ -1204,6 +1183,7 @@
           <i data-acorn-icon="paint-roller" class="position-relative"></i>
         </span>
       </button>
+    </div>
     <!-- Theme Settings & Niches Buttons End -->
 
     <!-- Search Modal Start -->
@@ -1241,11 +1221,13 @@
     <script src="icon/acorn-icons-interface.js"></script>
     <script src="icon/acorn-icons-commerce.js"></script>
 
-    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <script src="js/vendor/imask.js"></script>
 
-    <script src="js/vendor/chartjs-plugin-rounded-bar.min.js"></script>
+    <script src="js/vendor/select2.full.min.js"></script>
 
-    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/datepicker/bootstrap-datepicker.min.js"></script>
+
+    <script src="js/vendor/datepicker/locales/bootstrap-datepicker.es.min.js"></script>
 
     <!-- Vendor Scripts End -->
 
@@ -1258,10 +1240,9 @@
     <!-- Template Base Scripts End -->
     <!-- Page Specific Scripts Start -->
 
-    <script src="js/cs/charts.extend.js"></script>
-    <script src="js/plugin/charts.js"></script>
+    <script src="js/cs/checkall.js"></script>
 
-    <script src="js/pages/dashboard.js"></script>
+    <script src="js/pages/discount.js"></script>
 
     <script src="js/common.js"></script>
     <script src="js/scripts.js"></script>
